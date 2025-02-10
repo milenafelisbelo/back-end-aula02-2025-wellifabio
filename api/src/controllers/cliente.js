@@ -23,6 +23,19 @@ function read(req, res) {
     });
 }
 
+function update(req, res) {
+    const { id } = req.params;
+    const { nome, cpf, nascimento } = req.body;
+    const sql = `UPDATE clientes SET nome = ${nome}, cpf= ${cpf}, ${nascimento} = ? WHERE id_cliente = ${id}`;
+    con.query(sql, (error, result) => {
+        if (error) {
+            res.status(500).json('Erro ao alterar cliente');
+        } else {
+            res.status(202).json('Cliente alterado com sucesso');
+        }
+    });
+}
+
 function del(req, res) {
     const { id } = req.params;
     const sql = `DELETE FROM clientes WHERE id_cliente = ${id}`;
@@ -38,5 +51,6 @@ function del(req, res) {
 module.exports = {
     create,
     read,
+    update,
     del
 }
