@@ -7,3 +7,6 @@ CREATE TABLE clientes(
     cpf VARCHAR(255) NOT NULL,
     nascimento VARCHAR(255) NOT NULL
 );
+
+ALTER TABLE clientes CHANGE COLUMN nascimento nascimento DATE;
+DESCRIBE clientes;

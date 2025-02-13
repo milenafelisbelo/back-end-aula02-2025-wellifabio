@@ -26,7 +26,7 @@ function read(req, res) {
 function update(req, res) {
     const { id } = req.params;
     const { nome, cpf, nascimento } = req.body;
-    const sql = `UPDATE clientes SET nome = ${nome}, cpf= ${cpf}, ${nascimento} = ? WHERE id_cliente = ${id}`;
+    const sql = `UPDATE clientes SET nome = '${nome}', cpf= '${cpf}', nascimento = '${nascimento}' WHERE id_cliente = ${id}`;
     con.query(sql, (error, result) => {
         if (error) {
             res.status(500).json('Erro ao alterar cliente');

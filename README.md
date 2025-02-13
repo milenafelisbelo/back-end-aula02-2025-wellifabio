@@ -1,6 +1,8 @@
 # Projeto Clínica Médica
 Exemplo de CRUD simples **full-stack** com uma tabela de clientes.
-![Tela Inicial](./wireframe.png)
+|Wireraframe Web|Wireframe Mobile|
+|-|-|
+|![Tela Inicial](./wireframe.png)|![Tela Inicial](./wireframe-mobile.png)|
 
 ## Tecnologias
 - **Frontend**: HTML, CSS e JavaScript
